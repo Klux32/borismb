@@ -1,4 +1,4 @@
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
 export function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -25,11 +25,11 @@ export function scrollFunction() {
 
   const viewWidth = window.innerWidth;
 
-  console.log(viewWidth)
+  // console.log(viewWidth)
 
   const logoPosition = `${(viewWidth > 768 ? 50 : 84) + (document.documentElement.scrollTop/10)}%`
   
-  console.log(parseInt(logoPosition) >=113.636)
+  // console.log(parseInt(logoPosition) >=113.636)
   document.getElementById("landing_logo").style.top = parseInt(logoPosition) >= 113.636 ? "113.636%" : logoPosition;
   // document.getElementById("togglerIcon").classList.add("togglerColorChange")
 //   document.getElementById("landing_logo").style.position = `absolute`;

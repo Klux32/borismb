@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, {useEffect} from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
 
@@ -24,10 +24,10 @@ const NavElement = ({
     navItemsStyle,
 }) => {
 
-    // useEffect(()=>{
-    //     scrollFunction()
-    
-    // },[scrollFunction])
+    useEffect(()=>{
+        window.onscroll = function() {scrollFunction()};
+        // window.addEventListener("scroll", scrollFunction());
+    },[scrollFunction])
     console.log(social)
   return (
     <nav className={`navbar navbar-expand-lg ${style}`} id='navbar' data-bs-theme="dark">
