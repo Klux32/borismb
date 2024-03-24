@@ -2,13 +2,13 @@ import Image from "next/image";
 import NavElement from "./compoenents/navbars/navbar";
 import logoImage from "../public/logo.svg";
 
-import Landing from "./pages/landing/landing";
-import Offer from "./pages/offer/offer";
-// import Gallery from "./pages/gallery/gallery";
-import Gallery2 from "./pages/gallery/gallery2";
-import Contact from "./pages/contact/contact";
-import About from "./pages/about/about";
-import Footer from "./pages/footer/footer";
+import Landing from "./sections/landing/landing";
+import Offer from "./sections/offer/offer";
+// import Gallery from "./sections/gallery/gallery";
+import Gallery2 from "./sections/gallery/gallery2";
+import Contact from "./sections/contact/contact";
+import About from "./sections/about/about";
+import Footer from "./sections/footer/footer";
 
 export default function Home() {
   return (
