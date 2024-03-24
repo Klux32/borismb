@@ -1,0 +1,450 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+$color-red: #CD3927;
+$color-gray: #d4d4d4;
+$color-light-gray: #f8f9fa;
+$color-dark: #212529;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+h2{
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  // font-size: 7rem;
+  letter-spacing: .3rem;
+  text-shadow: 1px 1px 2px $color-gray;
+}
+
+.navbar{
+  transition: all .5s ease-in-out;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none !important;
+}
+
+.togglerColorChange{
+--bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+transition: all .5s ease-in-out;
+}
+
+.landing{
+  background-image: url("../public/landing2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  color:white;
+  height: 100vh;
+
+  &_rectangle{
+    width: 150px;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+    left: -20px;
+    box-shadow: 2px 3px 10px $color-dark;
+    opacity: 0.8;
+    z-index: 1006;
+    transform: skew(25deg);
+  }
+
+
+  &_front{
+    background-image: url("../public/landing-front.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    
+    // height: auto;
+    z-index: 1000;
+  }
+  &_logo{
+    width: 30%;
+    transform: rotate(90deg);
+    position: absolute;
+    opacity: 0.5;
+    top: 50%;
+    right:-70px;
+    z-index: 10;
+    transition: all 1s ease-in-out;
+  }
+
+  &_lead{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 1006;
+    text-align: justify;
+    // font-size: 1.2rem;
+  }
+
+  &_lead p{
+    font-size: 1.25rem;
+  }
+
+  &_lead h1{
+      font-family: "Protest Guerrilla", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: uppercase;
+      font-size: 7rem;
+      letter-spacing: .3rem;
+      text-shadow: 5px 5px 6px $color-dark;
+  }
+  @media (max-width: 992px){
+    &_lead h1{
+      font-size: 5rem;
+    }
+    &_logo{
+      right:-30px
+    }
+  }
+  @media (max-width: 768px) {
+    &_lead h1{
+      font-size: 4rem;
+      letter-spacing: normal;
+    }
+    &_logo{
+      left:50%;
+      top: 84%;
+      transform: translate(-50%, 0);
+      width: 20%;
+      position: absolute;
+      opacity: 0.6;
+    }
+  }
+  @media (max-width: 576px) {
+    &_lead h1{
+      font-size: 3rem;
+    }
+  }
+}
+
+.logo{
+  width: 100px;
+  transition: all .5s ease-in-out;
+}
+
+.offerWrap{
+  position: relative;
+  z-index: 11;
+}
+
+.offer{
+  transition: all 1s ease;
+  .card{
+    // height: 100%;
+    padding-top: 1rem;
+
+    .card-text{
+      // color: #CD3927;
+      // height: 100%;
+      overflow: hidden;
+      transition: all 0.8s ease-in-out !important;
+
+      .text{
+        transition: all 1s ease !important;
+      }
+    }
+    &_iconWrap{
+      
+      box-shadow: 2px 3px 5px $color-dark;
+      svg{
+        font-size: 5.5rem;
+      }
+
+
+    }
+  }
+
+  
+
+  .card:hover svg {
+    color: $color-red;
+    transition: all .7s ease;
+  }
+
+  .card:hover .card_iconWrap{
+    box-shadow: 1px 2px 5px $color-red;
+    transition: all .7s ease;
+  }
+}
+
+
+
+
+.about{
+
+  &_content{
+    border:none;
+    border-right: 1px solid $color-light-gray;
+  }
+  @media (max-width: 992px){
+    &_content{
+      border:none;
+      border-bottom: 1px solid $color-light-gray;
+    }
+  }
+}
+
+
+
+// * {
+//   box-sizing: border-box;
+//   position: relative;
+// }
+
+// html, body {
+//   height: 100%;
+//   width: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// img { 
+//   max-width: 100%;
+//   height: auto;
+//   transform-origin: top left;
+// }
+
+
+// #app {
+//   padding-bottom: 330%;
+// }
+
+.gallery {
+
+  /* https://tobiasahlin.com/blog/masonry-with-css/ */
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  overflow: hidden;
+  
+  height: 100%; // Sized based on vw to expand properly
+  
+  .gallery-image {
+    width: 33.3%;
+    height: 300px;
+    
+    &[data-flipping] {
+      opacity: 1;
+      z-index: 3;
+    }
+  }
+
+
+  /* Re-order items into rows */
+  .gallery-image:nth-child(3n+1) { order: 1; }
+  .gallery-image:nth-child(3n+2) { order: 2; }
+  .gallery-image:nth-child(3n)   { order: 3; }
+
+  /* Force new columns */
+  &::before,
+  &::after {
+    content: "";
+    flex-basis: 100%;
+    width: 0;
+    order: 2;
+  }
+
+  //display: grid;
+  //grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery-image {
+  margin: 0;
+  display: block;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #FFF;
+    text-shadow: 0 0 1px #000;
+    opacity: 0.8;
+    padding: 1em;
+    text-align: left;
+    transition: opacity .4s linear;
+    font-family: monospace;
+  }
+  
+  &:hover figcaption {
+    opacity: 1;
+  }
+}
+
+.detail {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(25,25,25,0);
+  box-shadow: 0 0 30px #000;
+  display: flex;
+  pointer-events: none;
+  transition: background .3s linear;
+
+  .gallery-image {
+    padding: 5vmin;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img { 
+      width: auto;
+      height: auto;
+      max-width: 100%; 
+      max-height: 100%; 
+    }
+    
+    figcaption { display: none; }
+    
+  }
+}
+
+[data-state="detail"] .detail {
+  // opacity: 1; 
+  background: rgba(25,25,25,.85);
+  pointer-events: auto;
+  .gallery-image { opacity: 1; }
+}
+
+[data-state="gallery"] .detail {
+  
+  .gallery-image {
+    opacity: 0;
+    transition: none;
+  }
+}
+
+/* ---------------------------------- */
+#galleryApp {
+  background: black;
+  pointer-events: none;
+  
+  .gallery .gallery-image {
+    pointer-events: auto;
+  }
+}
+
+.gallery-image {
+  transition: opacity .5s linear;
+}
+
+#galleryApp:hover .gallery {
+  .gallery-image { opacity: 0.1;}
+  
+  .gallery-image[data-flipping],
+  .gallery-image:hover { 
+    opacity: 1;
+    transition-duration: .3s;
+  }
+}
+
+
+.contact{
+  // &_img{
+  //   background-image: url("../public/contact.png");
+  //   // width: 100px;
+  //   // height: 500px;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  // }
+
+  &_img{
+    position: relative;
+    top: -150px;
+    left:50%;
+  }
+
+  .form-control{
+    border: none;
+    background-color: transparent !important;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    color: white;
+  
+  }
+  .form-control:focus{
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 2px solid white;
+    box-shadow: none;
+    color: white;
+  }
+
+//   input:-webkit-autofill:focus {
+//     background-color: #CD3927 !important;
+//     -webkit-text-fill-color: #31b0dd;
+//     -webkit-box-shadow: 0 0 0px 40rem #ffff inset;
+//   }
+
+//   input:-webkit-autofill {
+//     -webkit-background-color: #CD3927 !important;
+//     -webkit-text-fill-color: #31b0dd;
+//     -webkit-box-shadow: 0 0 0px 40rem #ffff inset;
+//   }
+//   input:-webkit-autofill:active {
+//     -webkit-background-composite: #CD3927 !important;
+//     -webkit-text-fill-color: #31b0dd;
+//     -webkit-box-shadow: 0 0 0px 40rem #ffff inset;
+//   }
+//   input:-internal-autofill-selected {
+//     appearance: menulist-button;
+//     background-image: none !important;
+//     background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+//     color: fieldtext !important;
+// }
+  
+}
