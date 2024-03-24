@@ -99,7 +99,7 @@ const Gallery = () => {
           {
               imagesData.map((item,key)=>(
                   <figure key={key} className="gallery-image align-self-center">
-                    <Image src={item.src} width={item.width} height={item.height} />
+                    <Image src={item.src} alt={item.alt} width={item.width} height={item.height} />
                     <figcaption></figcaption>
                   </figure>
               ))

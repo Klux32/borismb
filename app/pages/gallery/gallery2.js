@@ -35,6 +35,7 @@ const Gallery2 = () => {
     {
               imagesData.map((item,key)=>(
                   <Item
+                  key={key}
                   original={item.src.src}
                   thumbnail={item.src.src}
                   width={item.width}
@@ -42,7 +43,7 @@ const Gallery2 = () => {
                 >
                 {({ ref, open }) => (
                     <div className=' mb-4 col-6 col-sm-4 col-lg-3'>
-                        <img style={{height:"150px", width:"100%"}} ref={ref} onClick={open} src={item.src.src} />
+                        <Image alt='' style={{height:"150px", width:"100%"}} width={item.width} height={item.height} ref={ref} onClick={open} src={item.src.src} />
                     </div>
                 )}
               </Item>

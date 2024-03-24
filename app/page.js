@@ -4,7 +4,7 @@ import logoImage from "../public/logo.svg";
 
 import Landing from "./pages/landing/landing";
 import Offer from "./pages/offer/offer";
-import Gallery from "./pages/gallery/gallery";
+// import Gallery from "./pages/gallery/gallery";
 import Gallery2 from "./pages/gallery/gallery2";
 import Contact from "./pages/contact/contact";
 import About from "./pages/about/about";

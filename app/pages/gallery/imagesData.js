@@ -18,6 +18,10 @@ import img17 from "../../../public/img-17.jpg";
 import img18 from "../../../public/img-18.jpg";
 import img19 from "../../../public/img-19.jpg";
 import img20 from "../../../public/img-20.jpg";
+
+// import img1 from "../../../.next/static/media/img-1.4549804c.jpg";
+
+// console.log(img12)
 export const imagesData = [
     
     {
